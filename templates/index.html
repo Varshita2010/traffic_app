@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload - Traffic Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            background: #f9f9f9;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result-btn {
+            background: #28a745;
+            margin-top: 10px;
+        }
+        .result-btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Upload an Image for Prediction</h1>
+    <p>Select an image file to analyze traffic conditions.</p>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <br>
+        <button type="submit">Upload & Predict</button>
+    </form>
+
+    <!-- Button to View Result Page -->
+    <br>
+    <a href="/result">
+        <button class="result-btn">View Result</button>
+    </a>
+
+</body>
+</html>
